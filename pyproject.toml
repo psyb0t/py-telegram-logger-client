@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "telegram-logger-client"
+version = "0.1.0"
+authors = [{ name = "Ciprian Mandache", email = "psyb0t@51k.eu" }]
+description = "A Python client for the telegram-logger service"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+dependencies = ["requests>=2.32.3"]
+
+[project.urls]
+Homepage = "https://github.com/psyb0t/py-telegram-logger-client"
+Issues = "https://github.com/psyb0t/py-telegram-logger-client/issues"
+
+[project.scripts]
+telegram-logger-client = "telegram_logger_client.__main__:main"
