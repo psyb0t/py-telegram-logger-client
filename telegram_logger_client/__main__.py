@@ -27,7 +27,10 @@ def main():
         "--caller", required=True, help="Name of the calling application or service"
     )
     parser.add_argument(
-        "--level", required=True, choices=["info", "warning", "error"], help="Log level"
+        "--level",
+        required=True,
+        choices=["debug", "info", "warning", "error"],
+        help="Log level",
     )
     parser.add_argument("--message", required=True, help="Log message")
     parser.add_argument("--error", help="Error message or description")

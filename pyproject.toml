@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "telegram-logger-client"
-version = "0.1.0"
+version = "0.1.1"
 authors = [{ name = "Ciprian Mandache", email = "psyb0t@51k.eu" }]
 description = "A Python client for the telegram-logger service"
 readme = "README.md"
