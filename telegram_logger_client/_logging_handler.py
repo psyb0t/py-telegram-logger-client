@@ -9,16 +9,26 @@ from ._constants import (
 
 
 class TelegramLoggerHandler(logging.Handler):
-    def __init__(self, base_url: str, x_id: str, *args, **kwargs):
+    def __init__(
+        self,
+        base_url: str,
+        x_id: str,
+        show_originating_file: bool = False,
+        *args,
+        **kwargs,
+    ):
         super(TelegramLoggerHandler, self).__init__(*args, **kwargs)
         self.client = TelegramLoggerClient(base_url, x_id)
+        self.show_originating_file = show_originating_file
 
     def emit(self, record):
         try:
             message = record.getMessage()
-            data = {
-                "file": f"{record.pathname}:{record.lineno}",
-            }
+
+            data = {}
+            if self.show_originating_file:
+                data["file"] = f"{record.pathname}:{record.lineno}"
+
             if record.exc_info:
                 data["exception"] = self.formatter.formatException(record.exc_info)
 
@@ -47,6 +57,7 @@ def attach_to_logger(
     base_url: Optional[str] = None,
     x_id: Optional[str] = None,
     level: Optional[int] = None,
+    show_originating_file: bool = False,
 ):
     """
     Set up Telegram logging for an existing logger instance.
@@ -63,7 +74,7 @@ def attach_to_logger(
             "Both base_url and x_id must be provided either as arguments or through environment variables."
         )
 
-    telegram_handler = TelegramLoggerHandler(base_url, x_id)
+    telegram_handler = TelegramLoggerHandler(base_url, x_id, show_originating_file)
     telegram_handler.setFormatter(TelegramLogFormatter())
 
     if level is not None:
