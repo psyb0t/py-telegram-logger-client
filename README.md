@@ -82,6 +82,7 @@ Parameters for `attach_to_logger`:
 - `base_url`: The URL where your Telegram Logger service lives (optional if set in environment)
 - `x_id`: Your secret Telegram Logger handshake (optional if set in environment)
 - `level`: Set a specific logging level for Telegram logging (optional)
+- `show_originating_file`: Show the origin of the log (optional)
 
 Don't forget to set your `TELEGRAM_LOGGER_BASE_URL` and `TELEGRAM_LOGGER_X_ID` environment variables, or pass them directly to `attach_to_logger`. Now go forth and log like a boss! 🚀📝
 
