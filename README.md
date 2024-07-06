@@ -128,6 +128,7 @@ The client itself has two modes:
 
 Your logs, on the other hand, can be as dramatic as you want:
 
+- "debug": "console.log" level
 - "info": "Just FYI" level
 - "warning": "Hmm, that's interesting" level
 - "error": "Houston, we have a problem" level
