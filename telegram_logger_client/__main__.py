@@ -3,7 +3,8 @@ import json
 import os
 import sys
 import logging
-from .telegram_logger_client import TelegramLoggerClient
+from ._telegram_logger_client import TelegramLoggerClient
+from ._constants import ENV_VAR_TELEGRAM_LOGGER_BASE_URL, ENV_VAR_TELEGRAM_LOGGER_X_ID
 
 
 def setup_logging(debug=False):
@@ -47,8 +48,8 @@ def main():
     logger.debug(f"Parsed arguments: {args}")
 
     # Get base_url and x_id from environment variables or command-line arguments
-    base_url = args.base_url or os.environ.get("TELEGRAM_LOGGER_BASE_URL")
-    x_id = args.x_id or os.environ.get("TELEGRAM_LOGGER_X_ID")
+    base_url = args.base_url or os.environ.get(ENV_VAR_TELEGRAM_LOGGER_BASE_URL)
+    x_id = args.x_id or os.environ.get(ENV_VAR_TELEGRAM_LOGGER_X_ID)
 
     logger.debug(f"Base URL: {base_url}")
     logger.debug(

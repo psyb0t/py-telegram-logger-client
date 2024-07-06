@@ -53,6 +53,38 @@ logger.send_log(
 )
 ```
 
+### 🔌 Attaching to Existing logging.loggers
+
+Want to supercharge your existing logger with Telegram powers? We've got you covered! Use the `attach_to_logger` function to add Telegram logging to any logger instance:
+
+```python
+import logging
+from telegram_logger_client import attach_to_logger
+
+# Basic configuration for console output
+logging.basicConfig(level=logging.DEBUG)
+
+# Create your logger
+logger = logging.getLogger("your_logger_name")
+
+# Set up Telegram logging
+attach_to_logger(logger)
+
+# Use the logger as usual
+logger.info("This will be sent to Telegram Logger and output to stdout")
+```
+
+The `attach_to_logger` function is like a magic wand that adds Telegram logging capabilities to your existing logger. It takes care of all the behind-the-scenes work, so you can focus on what really matters - logging your heart out!
+
+Parameters for `attach_to_logger`:
+
+- `logger`: Your existing logger instance (required)
+- `base_url`: The URL where your Telegram Logger service lives (optional if set in environment)
+- `x_id`: Your secret Telegram Logger handshake (optional if set in environment)
+- `level`: Set a specific logging level for Telegram logging (optional)
+
+Don't forget to set your `TELEGRAM_LOGGER_BASE_URL` and `TELEGRAM_LOGGER_X_ID` environment variables, or pass them directly to `attach_to_logger`. Now go forth and log like a boss! 🚀📝
+
 ### 🖥️ Command Line Magic
 
 First, set up your secret lair:
