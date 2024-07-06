@@ -1,5 +1,7 @@
 # 🚀 telegram-logger-client: Your Log's New Best Friend
 
+![py-telegram-logger-client](assets/py-telegram-logger-client.jpg)
+
 Welcome to the telegram-logger-client - where your logs go to become stars!
 
 ## 🛠 Prerequisites
