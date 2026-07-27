@@ -1,5 +1,8 @@
 # 🚀 telegram-logger-client: Your Log's New Best Friend
 
+[![version](https://raw.githubusercontent.com/psyb0t/py-telegram-logger-client/badges/version.svg)](https://github.com/psyb0t/py-telegram-logger-client/releases)
+[![license](https://raw.githubusercontent.com/psyb0t/py-telegram-logger-client/badges/license.svg)](LICENSE)
+
 ![py-telegram-logger-client](assets/py-telegram-logger-client.jpg)
 
 Welcome to the telegram-logger-client - where your logs go to become stars!
