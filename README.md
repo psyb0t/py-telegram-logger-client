@@ -1,5 +1,6 @@
 # 🚀 telegram-logger-client: Your Log's New Best Friend
 
+[![CI](https://github.com/psyb0t/py-telegram-logger-client/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/psyb0t/py-telegram-logger-client/actions/workflows/pipeline.yml)
 [![version](https://raw.githubusercontent.com/psyb0t/py-telegram-logger-client/badges/version.svg)](https://github.com/psyb0t/py-telegram-logger-client/releases)
 [![license](https://raw.githubusercontent.com/psyb0t/py-telegram-logger-client/badges/license.svg)](LICENSE)
 
